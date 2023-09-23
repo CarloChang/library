@@ -1,0 +1,59 @@
+body {
+    background-color: #bfdbfe;
+    font-family: sans-serif;
+}
+
+svg {
+    width: 3rem;
+    fill: #eff6ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #172554;
+    color: #eff6ff;
+    padding: 1vh 0;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dbeafe;
+}
+
+#newBook {
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.books {
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.book {
+    background-color: #3b82f6;
+    padding: 10px;
+    color: #eff6ff;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: #172554 1px solid;
+    margin: 10px 0;
+}
+
+.author {
+    font-size: 1.5rem;
+}
