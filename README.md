@@ -7,3 +7,4 @@
 ### Objectives
 
 - Use **Prototypes** learned in previews lessons
+- Learn to use **objects**

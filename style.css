@@ -55,7 +55,6 @@ main {
 .title {
     font-size: 1.5rem;
     font-weight: bold;
-    border-bottom: #172554 1px solid;
     margin: 10px 0;
 }
 
@@ -66,4 +65,12 @@ main {
 .selection {
     display: flex;
     justify-content: space-around;
+}
+
+#myForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
