@@ -7,8 +7,11 @@ function Book(title, author, pages, read, id){
 }
 
 function addBookToLibrary(newTitle, newAuthor, newPages, newRead) {
+    id++;
+    
     const bookElement = document.createElement('div');
     bookElement.className = 'book';
+    bookElement.setAttribute('data-id', id);
     const titleElement = document.createElement('div');
     titleElement.className = 'title';
     const authorElement = document.createElement('div');
@@ -19,10 +22,17 @@ function addBookToLibrary(newTitle, newAuthor, newPages, newRead) {
     readElement.className = 'read';
 
     const deleteElement = document.createElement('button');
-    deleteElement.id = 'delete';
+    deleteElement.className = 'delete';
     deleteElement.textContent = 'Delete Book'
+    deleteElement.setAttribute('data-id', id);
+    deleteElement.addEventListener('click', (e) => {
+        const bookID = parseInt(e.target.getAttribute('data-id'));
+        const bookToRemove = document.getElementsByClassName(`book[data-id="${bookID}"]`);
+        bookElement.remove(bookToRemove);
+        myLibrary = myLibrary.filter(book => book.id !== bookID)
+    });
+
     
-    id++;
     const newBook = new Book(newTitle, newAuthor, newPages, newRead, id);
     myLibrary.push(newBook);
 
@@ -44,10 +54,8 @@ function addBookToLibrary(newTitle, newAuthor, newPages, newRead) {
     books.appendChild(bookElement);
 }
 
-const myLibrary = [];
+let myLibrary = [];
 let id = 0;
-
-
 
 const books = document.getElementById('books');
 

@@ -2,7 +2,7 @@
 
 ## Live preview
 
-*it is not ready yet!*
+*In this project I won't be using a lot of decoration (CSS), purely JS to make it easier.*
 
 ### Objectives
 

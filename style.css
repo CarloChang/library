@@ -84,7 +84,7 @@ dialog {
     font-size: 1.2rem;
 }
 
-#delete {
+.delete {
     color: white;
     background-color: tomato;
 }
